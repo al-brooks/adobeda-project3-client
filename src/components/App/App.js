@@ -1,4 +1,5 @@
 import "./App.css";
+import { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import NavBar from "../NavBar/NavBar";
 import Footer from "../Footer/Footer";
@@ -8,9 +9,14 @@ import BookListPage from "../../pages/BookListPage/BookListPage";
 import BookDetailPage from "../../pages/BookDetailPage/BookDetailPage";
 
 function App() {
+  const [search, setSearch] = useState({
+    category: "",
+    searchTerm: ""
+  });
+
   return (
     <div className="App">
-      <NavBar />
+      <NavBar setSearch={setSearch} />
       <SideBar />
       <Routes>
         <Route path="/" element={<LandingPage />} />
