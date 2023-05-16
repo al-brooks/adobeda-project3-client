@@ -20,7 +20,7 @@ function App() {
       <SideBar />
       <Routes>
         <Route path="/" element={<LandingPage />} />
-        <Route path="/search*" element={<BookListPage />} />
+        <Route path="/search/*" element={<BookListPage />} />
         <Route path="/books/:id" element={<BookDetailPage />} />
       </Routes>
       <Footer />
