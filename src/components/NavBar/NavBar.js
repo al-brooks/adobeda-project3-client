@@ -6,7 +6,7 @@ export default function NavBar() {
     category: "title",
     text: "",
     language: "eng",
-    fields: ["key", "title", "editions", "ratings_average"],
+    fields: ["key", "title", "editions", "ratings_average", "cover_i"],
     limit: 10
   });
 
@@ -37,7 +37,7 @@ export default function NavBar() {
       category: "title",
       text: "",
       language: "eng",
-      fields: ["key", "title", "editions", "ratings_average"],
+      fields: ["key", "title", "editions", "ratings_average", "cover_i"],
       limit: 10
     });
   };

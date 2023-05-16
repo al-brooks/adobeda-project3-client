@@ -27,12 +27,16 @@ export default function SearchResultPage() {
       <p>Below are the results:</p>
       {books.length > 0 ? (
         books.map(book => {
-          return (
-            <article>
-              <p>cover</p>
-              <p>{book.title}</p>
-            </article>
-          );
+          if (book.cover_i)
+            return (
+              <article>
+                <img
+                  src={`https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg`}
+                  alt="book cover"
+                />
+                <h3>{book.title}</h3>
+              </article>
+            );
         })
       ) : (
         <p>Blank</p>
