@@ -3,8 +3,9 @@ import { useNavigate, createSearchParams } from "react-router-dom";
 
 export default function NavBar({ setSearch }) {
   const [newSearch, setNewSearch] = useState({
-    searchOption: "title",
-    searchText: ""
+    category: "title",
+    text: "",
+    language: "eng"
   });
 
   const navigate = useNavigate();
@@ -18,12 +19,19 @@ export default function NavBar({ setSearch }) {
 
   const handleSubmit = evt => {
     evt.preventDefault();
+    const { category, text, language } = newSearch;
+    const searchObj = { language };
+    searchObj[category] = text;
+
     navigate({
       pathname: "search",
-      search: createSearchParams({
-        title: "Lord of the Rings",
-        language: "eng"
-      }).toString()
+      search: createSearchParams(searchObj).toString()
+    });
+
+    setNewSearch({
+      category: "title",
+      text: "",
+      language: "eng"
     });
   };
 
@@ -31,16 +39,21 @@ export default function NavBar({ setSearch }) {
     <nav>
       <p>LOGO</p>
       <form onSubmit={handleSubmit}>
-        <select name="searchOption" onChange={handleChange}>
+        <select
+          name="category"
+          onChange={handleChange}
+          value={newSearch.category}
+        >
           <option value="title">Title</option>
           <option value="author">Author</option>
           <option value="subject">Subject</option>
         </select>
         <input
           onChange={handleChange}
-          name="searchText"
+          name="text"
           type="text"
           placeholder="Search..."
+          value={newSearch.text}
         />
         <button type="submit">search</button>
       </form>
