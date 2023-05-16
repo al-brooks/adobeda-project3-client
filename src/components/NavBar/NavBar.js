@@ -6,7 +6,6 @@ export default function NavBar() {
     "key",
     "title",
     "editions",
-    "ratings_average",
     "cover_i",
     "first_publish_year",
     "author_name"
@@ -61,8 +60,7 @@ export default function NavBar() {
           value={newSearch.category}
         >
           <option value="title">Title</option>
-          <option value="author">Author</option>
-          <option value="subject">Subject</option>
+          {/* <option value="author">Author</option> */}
         </select>
         <input
           onChange={handleChange}
