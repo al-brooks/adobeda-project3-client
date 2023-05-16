@@ -5,7 +5,9 @@ export default function NavBar() {
   const [newSearch, setNewSearch] = useState({
     category: "title",
     text: "",
-    language: "eng"
+    language: "eng",
+    fields: ["key", "title", "editions", "ratings_average"],
+    limit: 10
   });
 
   const navigate = useNavigate();
@@ -19,19 +21,24 @@ export default function NavBar() {
 
   const handleSubmit = evt => {
     evt.preventDefault();
-    const { category, text, language } = newSearch;
-    const searchObj = { language };
+    const { category, text, language, fields, limit } = newSearch;
+    const searchObj = { language, limit };
     searchObj[category] = text;
+
+    // adding fields to separate str so commas don't convert to %2 in browser
+    const fieldsStr = "&fields=" + fields.join(",");
 
     navigate({
       pathname: "search",
-      search: createSearchParams(searchObj).toString()
+      search: createSearchParams(searchObj).toString() + fieldsStr
     });
 
     setNewSearch({
       category: "title",
       text: "",
-      language: "eng"
+      language: "eng",
+      fields: ["key", "title", "editions", "ratings_average"],
+      limit: 10
     });
   };
 

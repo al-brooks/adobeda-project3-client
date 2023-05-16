@@ -19,10 +19,24 @@ export default function SearchResultPage() {
     fetchBooks();
   }, [fetchBooks]);
 
+  console.log(books);
+
   return (
     <main>
       <h2>Search Result Page</h2>
       <p>Below are the results:</p>
+      {books.length > 0 ? (
+        books.map(book => {
+          return (
+            <article>
+              <p>cover</p>
+              <p>{book.title}</p>
+            </article>
+          );
+        })
+      ) : (
+        <p>Blank</p>
+      )}
     </main>
   );
 }
