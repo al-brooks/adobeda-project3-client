@@ -5,7 +5,7 @@ import NavBar from "../NavBar/NavBar";
 import Footer from "../Footer/Footer";
 import SideBar from "../SideBar/SideBar";
 import LandingPage from "../../pages/LandingPage/LandingPage";
-import BookListPage from "../../pages/BookListPage/BookListPage";
+import SearchResultPage from "../../pages/SearchResultPage/SearchResultPage";
 import BookDetailPage from "../../pages/BookDetailPage/BookDetailPage";
 
 function App() {
@@ -20,7 +20,7 @@ function App() {
       <SideBar />
       <Routes>
         <Route path="/" element={<LandingPage />} />
-        <Route path="/search/*" element={<BookListPage />} />
+        <Route path="/search/*" element={<SearchResultPage />} />
         <Route path="/books/:id" element={<BookDetailPage />} />
       </Routes>
       <Footer />
