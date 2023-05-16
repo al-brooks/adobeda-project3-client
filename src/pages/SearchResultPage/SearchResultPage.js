@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { Link, useLocation } from "react-router-dom";
 
 export default function SearchResultPage() {
@@ -7,19 +7,17 @@ export default function SearchResultPage() {
   const search = useLocation().search;
   const apiUrl = "https://openlibrary.org/search.json";
 
-  const fetchBooks = async () => {
+  const fetchBooks = useCallback(async () => {
     try {
       const response = await fetch(`${apiUrl}${search}`);
       const bookData = await response.json();
       setBooks(bookData.docs);
     } catch (error) {}
-  };
+  }, [search]);
 
   useEffect(() => {
     fetchBooks();
-  }, []);
-
-  console.log(books);
+  }, [fetchBooks]);
 
   return (
     <main>
