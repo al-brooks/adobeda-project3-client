@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useNavigate, createSearchParams } from "react-router-dom";
 
-export default function NavBar({ setSearch }) {
+export default function NavBar() {
   const [newSearch, setNewSearch] = useState({
     category: "title",
     text: "",

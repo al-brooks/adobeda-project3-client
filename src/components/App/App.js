@@ -9,14 +9,9 @@ import SearchResultPage from "../../pages/SearchResultPage/SearchResultPage";
 import BookDetailPage from "../../pages/BookDetailPage/BookDetailPage";
 
 function App() {
-  const [search, setSearch] = useState({
-    category: "",
-    searchTerm: ""
-  });
-
   return (
     <div className="App">
-      <NavBar setSearch={setSearch} />
+      <NavBar />
       <SideBar />
       <Routes>
         <Route path="/" element={<LandingPage />} />
