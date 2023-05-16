@@ -29,12 +29,14 @@ export default function SearchResultPage() {
         books.map(book => {
           if (book.cover_i)
             return (
-              <article>
+              <article style={{ display: "flex" }}>
                 <img
                   src={`https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg`}
                   alt="book cover"
                 />
                 <h3>{book.title}</h3>
+                <p>{book.first_publish_year}</p>
+                <p>Number of Editions: {book.editions.numFound}</p>
               </article>
             );
         })

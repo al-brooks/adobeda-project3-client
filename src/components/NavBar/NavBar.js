@@ -2,11 +2,20 @@ import { useState, useEffect } from "react";
 import { useNavigate, createSearchParams } from "react-router-dom";
 
 export default function NavBar() {
+  const fieldsArr = [
+    "key",
+    "title",
+    "editions",
+    "ratings_average",
+    "cover_i",
+    "first_publish_year",
+    "author_name"
+  ];
   const [newSearch, setNewSearch] = useState({
     category: "title",
     text: "",
     language: "eng",
-    fields: ["key", "title", "editions", "ratings_average", "cover_i"],
+    fields: fieldsArr,
     limit: 10
   });
 
@@ -37,7 +46,7 @@ export default function NavBar() {
       category: "title",
       text: "",
       language: "eng",
-      fields: ["key", "title", "editions", "ratings_average", "cover_i"],
+      fields: fieldsArr,
       limit: 10
     });
   };
