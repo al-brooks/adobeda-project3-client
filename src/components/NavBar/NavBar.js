@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useNavigate, createSearchParams } from "react-router-dom";
 
 export default function NavBar() {

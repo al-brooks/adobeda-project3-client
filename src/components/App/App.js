@@ -16,7 +16,7 @@ function App() {
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/search/*" element={<SearchResultPage />} />
-        <Route path="/books/:id" element={<BookDetailPage />} />
+        <Route path="/book/:id" element={<BookDetailPage />} />
       </Routes>
       <Footer />
     </div>
