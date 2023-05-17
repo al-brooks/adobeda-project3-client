@@ -19,41 +19,47 @@ export default function SearchResultPage() {
     fetchBooks();
   }, [fetchBooks]);
 
-  console.log(books);
+  const loading = () => {
+    return <h2>Loading...</h2>;
+  };
 
-  return (
-    <main>
-      <h2>Search Result Page</h2>
-      <p>Below are the results:</p>
-      {books.length > 0 ? (
-        books.map(book => {
-          let id = book.key.split("/")[2];
-          if (book.cover_i) {
-            return (
-              <article key={id}>
-                <Link to={`/book/${id}`}>
-                  <img
-                    src={`https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg`}
-                    alt="book cover"
-                  />
-                </Link>
-                <Link to={`/book/${id}`}>
-                  <h3>{book.title}</h3>
-                </Link>
-                <h4>By: {book.author_name[0]}</h4>
-                <p>First Published: {book.first_publish_year}</p>
-                <p>Number of Editions: {book.editions.numFound}</p>
-              </article>
-            );
-          } else {
-            return <div key={id} style={{ display: "hidden" }}></div>;
-          }
-        })
-      ) : (
-        <p>No Books Match Your Search...</p>
-      )}
-    </main>
-  );
+  const loaded = () => {
+    return (
+      <main>
+        <h2>Search Result Page</h2>
+        <p>Below are the results:</p>
+        {books.length > 0 ? (
+          books.map(book => {
+            let id = book.key.split("/")[2];
+            if (book.cover_i) {
+              return (
+                <article key={id}>
+                  <Link to={`/book/${id}`}>
+                    <img
+                      src={`https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg`}
+                      alt="book cover"
+                    />
+                  </Link>
+                  <Link to={`/book/${id}`}>
+                    <h3>{book.title}</h3>
+                  </Link>
+                  <h4>By: {book.author_name[0]}</h4>
+                  <p>First Published: {book.first_publish_year}</p>
+                  <p>Number of Editions: {book.editions.numFound}</p>
+                </article>
+              );
+            } else {
+              return <div key={id} style={{ display: "hidden" }}></div>;
+            }
+          })
+        ) : (
+          <p>No Books Match Your Search...</p>
+        )}
+      </main>
+    );
+  };
+
+  return <>{books ? loaded() : loading()}</>;
 }
 
 // Pulling search params

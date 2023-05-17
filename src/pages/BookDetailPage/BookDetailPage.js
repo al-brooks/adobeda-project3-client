@@ -18,15 +18,23 @@ export default function BookDetailPage() {
     fetchBook();
   }, [fetchBook]);
 
-  return (
-    <main>
-      <h2>BookDetailPage</h2>
-      <section>
-        <img
-          src={`https://covers.openlibrary.org/b/id/${book.covers[0]}-L.jpg`}
-          alt={`${book.title} Book Cover`}
-        />
-      </section>
-    </main>
-  );
+  const loading = () => {
+    return <h2>Loading Info...</h2>;
+  };
+
+  const loaded = () => {
+    return (
+      <main>
+        <h2>BookDetailPage</h2>
+        <section>
+          <img
+            src={`https://covers.openlibrary.org/b/id/${book.covers[0]}-L.jpg`}
+            alt={`${book.title} Book Cover`}
+          />
+        </section>
+      </main>
+    );
+  };
+
+  return <>{book ? loaded() : loading()}</>;
 }
