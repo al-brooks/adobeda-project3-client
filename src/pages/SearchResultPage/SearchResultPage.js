@@ -29,18 +29,20 @@ export default function SearchResultPage() {
         books.map(book => {
           if (book.cover_i) {
             return (
-              <Link to={`${book.key}`} key={book.key}>
-                <article>
+              <article key={book.key}>
+                <Link to={`${book.key}`}>
                   <img
                     src={`https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg`}
                     alt="book cover"
                   />
+                </Link>
+                <Link to={`${book.key}`}>
                   <h3>{book.title}</h3>
-                  <h4>By: {book.author_name[0]}</h4>
-                  <p>First Published: {book.first_publish_year}</p>
-                  <p>Number of Editions: {book.editions.numFound}</p>
-                </article>
-              </Link>
+                </Link>
+                <h4>By: {book.author_name[0]}</h4>
+                <p>First Published: {book.first_publish_year}</p>
+                <p>Number of Editions: {book.editions.numFound}</p>
+              </article>
             );
           } else {
             return <></>;
