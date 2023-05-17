@@ -18,6 +18,15 @@ export default function BookDetailPage() {
     fetchBook();
   }, [fetchBook]);
 
-  console.log(book);
-  return <h2>BookDetailPage</h2>;
+  return (
+    <main>
+      <h2>BookDetailPage</h2>
+      <section>
+        <img
+          src={`https://covers.openlibrary.org/b/id/${book.covers[0]}-L.jpg`}
+          alt={`${book.title} Book Cover`}
+        />
+      </section>
+    </main>
+  );
 }
