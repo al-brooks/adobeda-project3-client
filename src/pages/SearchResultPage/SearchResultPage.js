@@ -28,15 +28,16 @@ export default function SearchResultPage() {
       {books.length > 0 ? (
         books.map(book => {
           if (book.cover_i) {
+            let id = book.key.split("/")[2];
             return (
               <article key={book.key}>
-                <Link to={`${book.key}`}>
+                <Link to={`/book/${id}`}>
                   <img
                     src={`https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg`}
                     alt="book cover"
                   />
                 </Link>
-                <Link to={`${book.key}`}>
+                <Link to={`/book/${id}`}>
                   <h3>{book.title}</h3>
                 </Link>
                 <h4>By: {book.author_name[0]}</h4>
