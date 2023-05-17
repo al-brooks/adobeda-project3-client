@@ -31,7 +31,7 @@ export default function SearchResultPage() {
         {books.length > 0 ? (
           books.map(book => {
             let id = book.key.split("/")[2];
-            if (book.cover_i) {
+            if (book.cover_i && book.ratings_average) {
               return (
                 <article key={id}>
                   <Link
