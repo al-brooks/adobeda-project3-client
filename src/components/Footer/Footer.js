@@ -1,3 +1,17 @@
+import { Link } from "react-router-dom";
+
 export default function Footer() {
-  return <h2>Footer</h2>;
+  return (
+    <footer>
+      <p>
+        Copyright &copy; All Rights Reserved {new Date().getFullYear()} Book App
+      </p>
+      <p>
+        book data provided by{" "}
+        <Link to={"https://openlibrary.org/developers/api"}>
+          Openlibray API
+        </Link>
+      </p>
+    </footer>
+  );
 }
