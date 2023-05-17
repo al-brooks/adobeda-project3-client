@@ -34,7 +34,12 @@ export default function SearchResultPage() {
             if (book.cover_i) {
               return (
                 <article key={id}>
-                  <Link to={`/book/${id}`}>
+                  <Link
+                    to={`/book/${id}`}
+                    state={{
+                      author: `${book.author_name[0]}`
+                    }}
+                  >
                     <img
                       src={`https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg`}
                       alt="book cover"
