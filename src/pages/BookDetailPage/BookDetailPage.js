@@ -24,7 +24,7 @@ export default function BookDetailPage(props) {
   };
 
   const loaded = () => {
-    const { author } = location.state;
+    const { author, ratings_average } = location.state;
     const bookDescription = book?.description || book?.description?.value;
     const description = bookDescription
       ? bookDescription.split(/[\n\r]/g)[0]
@@ -41,6 +41,7 @@ export default function BookDetailPage(props) {
           <section>
             <h2>{book.title}</h2>
             {author ? <h3>By: {author}</h3> : <></>}
+            <p>{ratings_average} out of 5</p>
             {description ? (
               <p>{description}</p>
             ) : (

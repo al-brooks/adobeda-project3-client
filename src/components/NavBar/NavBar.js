@@ -8,6 +8,7 @@ export default function NavBar() {
     "editions",
     "cover_i",
     "first_publish_year",
+    "ratings_average",
     "author_name"
   ];
   const [newSearch, setNewSearch] = useState({

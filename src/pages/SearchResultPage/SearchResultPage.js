@@ -37,7 +37,8 @@ export default function SearchResultPage() {
                   <Link
                     to={`/book/${id}`}
                     state={{
-                      author: `${book.author_name[0]}`
+                      author: book.author_name[0],
+                      ratings_average: book.ratings_average.toFixed(2)
                     }}
                   >
                     <img
