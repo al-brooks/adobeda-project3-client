@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate, createSearchParams } from "react-router-dom";
+import { Link, useNavigate, createSearchParams } from "react-router-dom";
 
 export default function NavBar() {
   const fieldsArr = [
@@ -52,7 +52,7 @@ export default function NavBar() {
 
   return (
     <nav>
-      <p>LOGO</p>
+      <Link to={"/"}>Home</Link>
       <form onSubmit={handleSubmit}>
         <select
           name="category"

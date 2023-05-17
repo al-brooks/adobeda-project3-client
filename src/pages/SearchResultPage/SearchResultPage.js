@@ -27,10 +27,10 @@ export default function SearchResultPage() {
       <p>Below are the results:</p>
       {books.length > 0 ? (
         books.map(book => {
+          let id = book.key.split("/")[2];
           if (book.cover_i) {
-            let id = book.key.split("/")[2];
             return (
-              <article key={book.key}>
+              <article key={id}>
                 <Link to={`/book/${id}`}>
                   <img
                     src={`https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg`}
@@ -46,11 +46,11 @@ export default function SearchResultPage() {
               </article>
             );
           } else {
-            return <></>;
+            return <div key={id} style={{ display: "hidden" }}></div>;
           }
         })
       ) : (
-        <p>Blank</p>
+        <p>No Books Match Your Search...</p>
       )}
     </main>
   );
