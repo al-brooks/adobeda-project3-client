@@ -1,8 +1,9 @@
-.LandingPage {
-  display: flex;
-  justify-content: space-evenly;
+img {
+  width: 70vmin;
 }
 
-.content {
-  margin-right: 5vmin;
+.LandingPage {
+  display: grid;
+  grid-template-columns: 1fr 25rem;
+  grid-template-rows: 1fr;
 }

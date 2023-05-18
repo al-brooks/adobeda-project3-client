@@ -9,7 +9,7 @@ export default function LandingPage() {
         <h2>
           Welcome to Book<span>Smart</span>
         </h2>
-        <p>Start Searching For Your Favorite Book Today!</p>
+        <h3>Start Searching For Your Favorite Book Today!</h3>
         <img src={landingImg} alt="" />
       </section>
       <SideBar />
