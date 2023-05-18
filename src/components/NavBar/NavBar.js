@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link, useNavigate, createSearchParams } from "react-router-dom";
+import logo from "../../imgs/Book_App_Logo.png";
 
 export default function NavBar() {
   const fieldsArr = [
@@ -53,7 +54,9 @@ export default function NavBar() {
 
   return (
     <nav>
-      <Link to={"/"}>Home</Link>
+      <Link to={"/"}>
+        <img src={logo} alt="Book Smart Logo" />
+      </Link>
       <form onSubmit={handleSubmit}>
         <select
           name="category"
