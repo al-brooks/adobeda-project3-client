@@ -4,7 +4,8 @@ export default function Footer() {
   return (
     <footer>
       <p>
-        Copyright &copy; All Rights Reserved {new Date().getFullYear()} Book App
+        Copyright &copy; All Rights Reserved {new Date().getFullYear()} Book
+        <span>Smart</span>
       </p>
       <p>
         book data provided by{" "}
