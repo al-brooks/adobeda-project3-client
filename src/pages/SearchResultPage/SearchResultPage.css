@@ -1,0 +1,26 @@
+article {
+  margin-top: 5vmin;
+}
+
+article a {
+  margin-right: 4vmin;
+}
+
+article a:hover {
+  color: var(--color-five);
+}
+
+article a img {
+  display: block;
+}
+
+.SearchResultPage {
+  display: grid;
+  grid-template-columns: 1fr 25rem;
+  grid-template-rows: 1fr;
+  margin-bottom: 4vmin;
+}
+
+.book-info:last-child {
+  border-bottom: 2px solid var(--color-one);
+}
