@@ -9,7 +9,7 @@ export default function Footer() {
       <p>
         book data provided by{" "}
         <Link to={"https://openlibrary.org/developers/api"}>
-          Openlibray API
+          <span>Openlibray API</span>
         </Link>
       </p>
     </footer>
