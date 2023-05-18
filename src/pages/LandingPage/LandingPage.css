@@ -1,0 +1,12 @@
+.LandingPage {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.content {
+  margin-right: 5vmin;
+}
+
+#about {
+  width: 25%;
+}
