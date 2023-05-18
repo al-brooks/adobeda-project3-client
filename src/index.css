@@ -23,8 +23,25 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
-#root {
-  height: 100%;
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  height: 2rem;
+  width: 12vmin;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--color-two);
+  color: var(--color-six);
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: var(--color-four);
 }
 
 .flex-alignctr {
@@ -49,27 +66,16 @@ body {
 }
 
 .logo-s {
+  display: block;
   width: 10vmin;
   margin-right: 2.5vmin;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
+.logo-m {
+  display: block;
+  width: 20vmin;
 }
 
-button {
-  height: 2rem;
-  width: 12vmin;
-  font-size: 1rem;
-  font-weight: 600;
-  border: none;
-  border-radius: 5px;
-  background-color: var(--color-two);
-  color: var(--color-six);
-}
-
-button:hover {
-  cursor: pointer;
-  background-color: var(--color-four);
+#root {
+  height: 100%;
 }

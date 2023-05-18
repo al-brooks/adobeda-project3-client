@@ -1,6 +1,6 @@
 .NavBar {
   background-color: var(--color-one);
-  padding: 0vmin 4vmin;
+  padding: 1vmin 4vmin;
   color: var(--color-six);
   position: fixed;
   right: 0;
@@ -10,7 +10,7 @@
 }
 
 h2 {
-  margin-right: 2.5vmin;
+  margin: 0 2.5vmin 0 0;
   font-size: 2rem;
 }
 
