@@ -4,7 +4,9 @@
   --color-three: #e9c46a;
   --color-four: #f4a261;
   --color-five: #e76f51;
-  --color-six: #fefae0;
+  --color-six: #f6fff8;
+  --color-seven: #eaf4f4;
+  --color-eight: #6b9080;
 }
 
 *,
@@ -16,8 +18,44 @@
 body {
   margin: 0 auto;
   background-color: var(--color-six);
+  font-family: "Poppins", sans-serif;
 }
 
 #root {
   height: 100%;
+}
+
+.flex-alignctr {
+  display: flex;
+  align-items: center;
+}
+
+.flex-ctr-ctr {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-spacebtw-ctr {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.logo-s {
+  width: 10vmin;
+  margin-right: 2.5vmin;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  height: 2.1rem;
 }

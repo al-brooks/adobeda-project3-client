@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link, useNavigate, createSearchParams } from "react-router-dom";
 import logo from "../../imgs/Book_App_Logo.png";
+import "./NavBar.css";
 
 export default function NavBar() {
   const fieldsArr = [
@@ -53,11 +54,16 @@ export default function NavBar() {
   };
 
   return (
-    <nav>
+    <nav className="NavBar flex-alignctr">
       <Link to={"/"}>
-        <img src={logo} alt="Book Smart Logo" />
+        <img src={logo} className={"logo-s"} alt="Book Smart Logo" />
       </Link>
-      <form onSubmit={handleSubmit}>
+      <Link to={"/"}>
+        <h2>
+          Book<span>Smart</span>
+        </h2>
+      </Link>
+      <form onSubmit={handleSubmit} className="flex-ctr-ctr">
         <select
           name="category"
           onChange={handleChange}
