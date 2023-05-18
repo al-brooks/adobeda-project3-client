@@ -54,7 +54,7 @@ export default function NavBar() {
   };
 
   return (
-    <nav className="NavBar flex-alignctr">
+    <nav className="NavBar flex-ctr-ctr">
       <Link to={"/"}>
         <img src={logo} className={"logo-s"} alt="Book Smart Logo" />
       </Link>

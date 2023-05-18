@@ -1,7 +1,12 @@
 .NavBar {
   background-color: var(--color-one);
-  padding: 1vmin 4vmin;
+  padding: 0vmin 4vmin;
   color: var(--color-six);
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
+  z-index: 1030;
 }
 
 h2 {
@@ -27,6 +32,7 @@ select {
 input {
   font-size: 1.2rem;
   height: 2rem;
+  width: 50vmin;
   border: none;
   border-radius: 5px;
   background-color: var(--color-seven);
