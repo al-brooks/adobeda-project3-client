@@ -1,0 +1,11 @@
+#about {
+  width: 25%;
+}
+
+#site-info {
+  border: 2px solid var(--color-one);
+  border-radius: 5px;
+  padding: 2vmin;
+  color: var(--color-six);
+  background-color: var(--color-one);
+}
