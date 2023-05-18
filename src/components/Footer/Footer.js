@@ -8,7 +8,8 @@ export default function Footer() {
         <span>Smart</span>
       </p>
       <p>
-        book data provided by{" "}
+        <em>All book data provided by:</em>
+        <br />
         <Link to={"https://openlibrary.org/developers/api"}>
           <span>Openlibray API</span>
         </Link>
