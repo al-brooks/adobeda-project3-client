@@ -23,6 +23,9 @@ BookSmart is a web application that allows users to look up their favorite books
 ### Book Detail Page
 ![booksmart_details](https://github.com/al-brooks/adobeda-project3-client/assets/47277927/8256a60a-67f6-47d4-b8cf-600848cda660)
 
+### Landing Page Photo Source:
+* https://unsplash.com/photos/HH4WBGNyltc
+
 
 ## Technologies:
 
