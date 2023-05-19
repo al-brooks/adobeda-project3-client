@@ -1,6 +1,6 @@
 article {
   margin-top: 5vmin;
-  padding-left: 20vmin;
+  width: 60vmin;
 }
 
 article h3 {
@@ -21,6 +21,7 @@ article a:hover {
 
 article a img {
   display: block;
+  width: 25vmin;
 }
 
 .SearchResultPage {
@@ -35,6 +36,10 @@ article a img {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.book-info {
+  width: 50%;
 }
 
 .book-info:last-child {

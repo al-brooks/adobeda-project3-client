@@ -28,14 +28,14 @@ export default function SearchResultPage() {
   const loaded = () => {
     return (
       <main className="SearchResultPage">
-        <section>
+        <section className="search-content">
           <h2>Search Result Page</h2>
           {books.length > 0 ? (
             books.map(book => {
               let id = book.key.split("/")[2];
               if (book.cover_i && book.ratings_average) {
                 return (
-                  <article className="flex-alignctr" key={id}>
+                  <article className="flex-ctr-ctr" key={id}>
                     <Link
                       to={`/book/${id}`}
                       state={{
