@@ -7,7 +7,6 @@ export default function BookDetailPage(props) {
   const { id } = useParams();
   const location = useLocation();
 
-  // todo: need to fetch book data from server-side an render to react app
   const fetchBook = useCallback(async () => {
     try {
       const book = await bookService.getBook(id);

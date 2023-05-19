@@ -35,7 +35,7 @@ export default function SearchResultPage() {
               let id = book.key.split("/")[2];
               if (book.cover_i && book.ratings_average) {
                 return (
-                  <article className="flex-ctr-ctr" key={id}>
+                  <article className="flex-alignctr" key={id}>
                     <Link
                       to={`/book/${id}`}
                       state={{

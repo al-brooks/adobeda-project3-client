@@ -1,5 +1,14 @@
 article {
   margin-top: 5vmin;
+  padding-left: 20vmin;
+}
+
+article h3 {
+  margin: 0;
+}
+
+article h4 {
+  margin: 0.25vmin 0;
 }
 
 article a {
@@ -19,6 +28,13 @@ article a img {
   grid-template-columns: 1fr 25rem;
   grid-template-rows: 1fr;
   margin-bottom: 4vmin;
+}
+
+.search-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .book-info:last-child {
