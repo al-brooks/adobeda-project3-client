@@ -29,7 +29,7 @@ export default function SearchResultPage() {
     return (
       <main className="SearchResultPage">
         <section className="search-content">
-          <h2>Search Result Page</h2>
+          <h2>Search Results...</h2>
           {books.length > 0 ? (
             books.map(book => {
               let id = book.key.split("/")[2];
@@ -49,7 +49,13 @@ export default function SearchResultPage() {
                       />
                     </Link>
                     <section className="book-info">
-                      <Link to={`/book/${id}`}>
+                      <Link
+                        to={`/book/${id}`}
+                        state={{
+                          author: book.author_name[0],
+                          ratings_average: book.ratings_average.toFixed(2)
+                        }}
+                      >
                         <h3>{book.title}</h3>
                       </Link>
                       <h4>By: {book.author_name[0]}</h4>

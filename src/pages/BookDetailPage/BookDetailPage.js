@@ -25,7 +25,9 @@ export default function BookDetailPage(props) {
   };
 
   const loaded = () => {
-    const { author, ratings_average } = location.state;
+    const author = location.state?.author || "Author not found.";
+    let ratings_average = location.state?.ratings_average || "No Ratings Yet";
+
     const bookDescription = book?.description || book?.description?.value;
     const description = bookDescription
       ? bookDescription.split(/[\n\r]/g)[0]
