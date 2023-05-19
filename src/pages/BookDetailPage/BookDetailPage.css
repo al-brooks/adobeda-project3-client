@@ -1,7 +1,11 @@
 .BookDetailPage {
   display: grid;
-  grid-template-columns: 1fr 25rem;
+  grid-template-columns: 1fr 20rem;
   grid-template-rows: 1fr;
+}
+
+.BookDetailPage section img {
+  width: 40%;
 }
 
 .detail-content {
