@@ -1,0 +1,15 @@
+.BookDetailPage {
+  display: grid;
+  grid-template-columns: 1fr 20rem;
+  grid-template-rows: 1fr;
+  margin-bottom: 4vmin;
+}
+
+.BookDetailPage section img {
+  width: 40%;
+}
+
+.detail-content {
+  margin-left: 4vmin;
+  width: 50%;
+}

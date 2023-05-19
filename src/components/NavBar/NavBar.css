@@ -1,0 +1,44 @@
+.NavBar {
+  background-color: var(--color-one);
+  padding: 1vmin 4vmin;
+  color: var(--color-six);
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
+  z-index: 1030;
+}
+
+h2 {
+  margin: 0 2.5vmin 0 0;
+  font-size: 2rem;
+}
+
+span {
+  color: var(--color-two);
+}
+
+select {
+  font-size: 1.2rem;
+  width: 12vmin;
+  height: 2rem;
+  background-color: var(--color-seven);
+  color: var(--color-eight);
+  border: none;
+  border-radius: 5px;
+  margin-right: 1vmin;
+}
+
+input {
+  font-size: 1.2rem;
+  height: 2rem;
+  width: 50vmin;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--color-seven);
+  margin-right: 1vmin;
+}
+
+input::placeholder {
+  color: var(--color-eight);
+}

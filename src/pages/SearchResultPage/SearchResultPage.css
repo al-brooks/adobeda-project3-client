@@ -1,0 +1,47 @@
+article {
+  margin-top: 5vmin;
+  width: 60vmin;
+}
+
+article h3 {
+  margin: 0;
+}
+
+article h4 {
+  margin: 0.25vmin 0;
+}
+
+article a {
+  margin-right: 4vmin;
+}
+
+article a:hover {
+  color: var(--color-five);
+}
+
+article a img {
+  display: block;
+  width: 25vmin;
+}
+
+.SearchResultPage {
+  display: grid;
+  grid-template-columns: 1fr 25rem;
+  grid-template-rows: 1fr;
+  margin-bottom: 4vmin;
+}
+
+.search-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.book-info {
+  width: 50%;
+}
+
+.book-info:last-child {
+  border-bottom: 2px solid var(--color-one);
+}
