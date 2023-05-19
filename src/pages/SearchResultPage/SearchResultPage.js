@@ -4,7 +4,8 @@ import SideBar from "../../components/SideBar/SideBar";
 import "./SearchResultPage.css";
 
 export default function SearchResultPage() {
-  const [books, setBooks] = useState({});
+  const [books, setBooks] = useState(null);
+  const [error, setError] = useState("");
 
   const search = useLocation().search;
   const apiUrl = "https://openlibrary.org";
@@ -14,7 +15,10 @@ export default function SearchResultPage() {
       const response = await fetch(`${apiUrl}/search.json${search}`);
       const bookData = await response.json();
       setBooks(bookData.docs);
-    } catch (error) {}
+      setError("");
+    } catch {
+      setError("Oh no! Something went wrong...");
+    }
   }, [search]);
 
   useEffect(() => {
@@ -22,6 +26,9 @@ export default function SearchResultPage() {
   }, [fetchBooks]);
 
   const loading = () => {
+    if (error) {
+      return <h2>{error}</h2>;
+    }
     return <h2>Loading...</h2>;
   };
 
@@ -79,9 +86,3 @@ export default function SearchResultPage() {
 
   return <>{books ? loaded() : loading()}</>;
 }
-
-// Pulling search params
-// const params = new URLSearchParams(search);
-// for (const [key, value] of params) {
-//   console.log(`${key}: ${value}`);
-// }

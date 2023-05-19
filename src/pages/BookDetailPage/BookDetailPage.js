@@ -6,6 +6,7 @@ import "./BookDetailPage.css";
 
 export default function BookDetailPage(props) {
   const [book, setBook] = useState(null);
+  const [error, setError] = useState("");
   const { id } = useParams();
   const location = useLocation();
 
@@ -13,7 +14,10 @@ export default function BookDetailPage(props) {
     try {
       const book = await bookService.getBook(id);
       setBook(book);
-    } catch (error) {}
+      setError("");
+    } catch {
+      setError("Oh no! Something went wrong...");
+    }
   }, [id]);
 
   useEffect(() => {
@@ -21,6 +25,9 @@ export default function BookDetailPage(props) {
   }, [fetchBook]);
 
   const loading = () => {
+    if (error) {
+      return <h2>{error}</h2>;
+    }
     return <h2>Loading Info...</h2>;
   };
 
